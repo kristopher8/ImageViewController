@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if let image = UIImage(named:"ginger")
+        {
+            let vc = ViewController(image: image)
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = vc
+            window?.makeKeyAndVisible()
+        }
         // Override point for customization after application launch.
         return true
     }
